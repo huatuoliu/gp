@@ -22,7 +22,7 @@ def print_stock():
         fileName = "foo"+dateStr+".txt"
         fo = open(fileName, "a+")
         while True:
-            if not(113001 > int(time.strftime("%H%M%S")) > 92900 or 150101 > int(time.strftime("%H%M%S")) > 130000):
+            if not(113001 > int(time.strftime("%H%M%S")) > 92500 or 150101 > int(time.strftime("%H%M%S")) > 130000):
                 time.sleep(60)
                 if 90000 > int(time.strftime("%H%M%S")) > 70000:
                     testInfo = {}
@@ -30,7 +30,7 @@ def print_stock():
             else:
                 break
         try:
-            stocklist=['sh000001','sz399006','sh601088',"sh601688","sz002460","sh600276","sz000725"]
+            stocklist=['sh000001','sz399006','sh601989',"sz002460","sh601088"]
             stocks=','.join(stocklist)
             url = 'http://hq.sinajs.cn/list='+stocks
             html = getreply(url)
